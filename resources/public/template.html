@@ -1,0 +1,171 @@
+<!DOCTYPE html>   
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Passw.org</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="" />
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<!-- !CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- Uncomment if you are specifically targeting less enabled mobile browsers
+	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">  -->
+	
+	<!-- !Modernizr - All other JS at bottom -->
+	<script src="js/modernizr-1.5.min.js"></script>
+	
+	<style>
+	
+	@font-face {
+	    font-family: 'proximanova-light';
+	    src: url('fonts/proximanova-light-webfont.eot');
+	    src: url('fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/proximanova-light-webfont.woff') format('woff'),
+	         url('fonts/proximanova-light-webfont.ttf') format('truetype'),
+	         url('fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	html, body{
+		font-family: proximanova-light;
+		margin: 0px;
+	}
+	h1{
+		color: #CE2E7F;
+		font-size: 100px;
+		line-height: 140px;
+/* 		background-color: rgba(128,128,0,0.31); */
+		margin: 0px;
+	}
+	h4{
+		font-family: proximanova-light;
+		font-weight: 100;
+		color: #5FBDFF;
+		font-size: 14px;
+		line-height: 14px;
+/* 		background-color: rgba(128,128,0,0.31); */
+		margin: 0px;
+	}
+	header{
+		margin: 0px;
+		padding: 6px;
+		background-color: #f2a80a;
+		text-align: center;
+		color: white;
+	}
+	header a {
+		color: white;
+	}
+	#subheader{
+		position: relative;
+		top: -28px;
+		left: 24px;
+	}
+	#brand{
+/* 		background-color: aqua; */
+	}
+	#main{
+		display: block;
+		margin: 48px auto 15px auto;
+/* 		border: 1px solid rgba(0,0,0,0.3); */
+		width: 620px;
+	}
+	#icon{
+		display: inline-block;
+		margin: 11px 30px;
+	}
+	#title{
+		display: inline-block;
+/* 		border: 1px solid rgba(0,0,0,0.3); */
+		width: 320px;
+	}
+	.api-inst{
+		color: #a9a8a8;
+		font-size: 11px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	#formly{
+		margin: 2px auto 21px auto;
+		display: block;
+	}
+	#pw{
+		width: 500px;
+		height: 46px;
+		font-family: monospace;
+		border: 1px solid #A76C43;
+		font-size: 28px;
+		padding: 10px 0px 10px 21px;
+		border-radius: 3px;
+/* 		background-color: aqua; */
+		display: inline-block;
+	}
+	#rnd{
+/* 		margin: 33px 0px 10px 0px; */
+		display: inline-block;
+		position: relative;
+		top: 20px;
+	}
+	#candp{
+		color: #5e5d5d;
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	footer{
+		text-align: center;
+		margin-top: 200px;
+		color: #bebcbc;
+	}
+	footer a {
+		color: #bebcbc;
+	}
+	</style>
+</head>
+<!-- !Body -->
+<body>
+	<div id="container">
+		<header>
+			You can query the API directly and get a password with <code> GET</code> <a href="http://passw.org/pw">http://passw.org/pw</a>
+		</header><!-- /header -->
+		
+		<section id="main">
+
+			<div class="api-inst">
+			</div>
+			<div id="brand">
+				<img src="donut.png" id="icon">
+				<div id="title">
+					<h1>passw</h1>
+					<h4 id="subheader">Easy to remember, (VERY) hard to crack.</h4>
+				</div>
+			</div>
+			<div id="formly">
+				<input type="text" id="pw" value="{{password}}">
+				<a href="/"><img src="rnd.png" id="rnd"></a>
+			</div>
+			<div id="candp">This will probably take up to {{years}} years to brute force crack! </div>
+			<div id="candp"><strong>{{cheer}}</strong></div>
+
+
+		</section><!-- /main -->
+		
+		<footer>
+		<a href="http://aan.io">ADAM NEILSON</a> &COPY; 2013
+		</footer><!-- /footer -->
+	</div><!--!/#container -->
+	<!-- !Javascript - at the bottom for fast page loading -->
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
+	<script src="js/plugins.js?v=1"></script>
+	<script src="js/script.js?v=1"></script>
+</body>
+</html>
