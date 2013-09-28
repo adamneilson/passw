@@ -46,7 +46,7 @@
 
   )
 
-My home has been invaded by a gaggle of ex-fashion models so I 
+;My home has been invaded by a gaggle of ex-fashion models so I wrote this
 
 (defn get-index "doc-string" []
 
