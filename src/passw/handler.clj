@@ -4,6 +4,7 @@
         [clojure.pprint])
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
+            [ring.adapter.jetty :as jetty]
             [clojure.data.csv :as csv]
             [clojure.java.io :as io]
             [taoensso.timbre :as logger :refer (trace debug info warn error report)]))
