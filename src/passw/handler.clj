@@ -19,7 +19,7 @@
       (csv/read-csv in-file :quote \'))))
 
 (def cheers
-  '("Yay!" "Have yourself a donut!" "Awesome!" "Cool!" "FTW!" "Tip top!"
+  '("Yay!" "Have yourself a doughnut!" "Awesome!" "Cool!" "FTW!" "Tip top!"
            ))
 
 (def connectors '(
