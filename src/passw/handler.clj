@@ -46,7 +46,7 @@
 
   )
 
-
+My home has been invaded by a gaggle of ex-fashion models so I 
 
 (defn get-index "doc-string" []
 
@@ -91,3 +91,13 @@
 
 (def app
   (handler/site app-routes))
+
+
+;for deployment purposes
+(defn -main
+  [& [port]]
+  (let [port (Integer. (or port
+                           (System/getenv "PORT")
+                           80))]
+    (jetty/run-jetty #'app {:port  port
+                            :join? false})))
