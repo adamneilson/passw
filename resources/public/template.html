@@ -14,7 +14,7 @@
 	<meta name="author" content="">
 
     <!-- Following Meta-Tag fixes scaling-issues on mobile devices -->
-    <meta content="width=300px; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport">
+	<meta name="viewport" content="width=devive-width, initial-scale=1.0">
     
         
 	<!-- !CSS -->
@@ -45,16 +45,13 @@
 		color: #CE2E7F;
 		font-size: 100px;
 		line-height: 140px;
-/* 		background-color: rgba(128,128,0,0.31); */
 		margin: 0px;
 	}
 	h4{
 		font-family: proximanova-light;
-		font-weight: 100;
 		color: #5FBDFF;
 		font-size: 14px;
 		line-height: 14px;
-/* 		background-color: rgba(128,128,0,0.31); */
 		margin: 0px;
 	}
 	header{
@@ -67,6 +64,10 @@
 	header a {
 		color: white;
 	}
+	#container{
+		width: 100%;
+		margin: 0px;
+	}
 	#subheader{
 		position: relative;
 		top: -28px;
@@ -74,13 +75,11 @@
 		font-size: 20px;
 	}
 	#brand{
-/* 		background-color: aqua; */
+		text-align: center;
 	}
 	#main{
 		display: block;
 		margin: 48px auto 15px auto;
-/* 		border: 1px solid rgba(0,0,0,0.3); */
-		width: 620px;
 	}
 	#icon{
 		display: inline-block;
@@ -88,63 +87,99 @@
 	}
 	#title{
 		display: inline-block;
-/* 		border: 1px solid rgba(0,0,0,0.3); */
-		width: 320px;
 	}
 	.api-inst{
 		color: #a9a8a8;
 		font-size: 11px;
 		text-align: center;
 		margin-bottom: 20px;
+		width: 100%;
 	}
 	#formly{
 		margin: 2px auto 21px auto;
 		display: block;
+		width: 100%;
+		text-align: center;
 	}
 	#pw{
-		width: 500px;
+		width: 70%;
+		max-width: 500px;
 		height: 46px;
 		font-family: monospace;
 		border: 1px solid #A76C43;
 		font-size: 28px;
 		padding: 10px 0px 10px 21px;
 		border-radius: 3px;
-/* 		background-color: aqua; */
 		display: inline-block;
+		white-space: normal;
+		vertical-align: middle;
 	}
 	#rnd{
-/* 		margin: 33px 0px 10px 0px; */
 		display: inline-block;
 		position: relative;
-		top: 20px;
+		white-space: normal;
+		vertical-align: middle;
 	}
 	#candp{
 		color: #5e5d5d;
 		font-size: 16px;
 		text-align: center;
-		margin-bottom: 20px;
+		margin: 0px auto 20px auto;
+		width: 76%;
 	}
 	footer{
 		text-align: center;
-		margin-top: 200px;
+		margin-top: 150px;
 		color: #bebcbc;
 	}
 	footer a {
 		color: #bebcbc;
 	}
+	
+@media all and (max-width: 700px) {
+
+
+	h1{
+		color: #CE2E7F;
+		font-size: 70px;
+		line-height: 70px;
+		margin: 0px;
+	}
+	h4{
+		font-family: proximanova-light;
+		color: #5FBDFF;
+		font-size: 10px;
+		line-height: 10px;
+		margin: 0px;
+	}
+	#icon{
+		width: 120px;
+		display: inline-block;
+/* 		white-space: normal; */
+		vertical-align: middle;
+		margin: 14px 10px;
+	}
+	#subheader{
+		position: relative;
+		top: -8px;
+		left: 4px;
+		font-size: 13px;
+	}
+	
+}
+
 	</style>
 </head>
 <!-- !Body -->
 <body>
 	<div id="container">
 		<header>
-			You can query the API directly and get a password with <code> GET</code> <a href="http://passw.org/pw">http://passw.org/pw</a>
+			You can query the API directly and get a password with <code>GET</code> <a href="http://passw.org/pw">http://passw.org/pw</a>
 		</header><!-- /header -->
 		
 		<section id="main">
 
-			<div class="api-inst">
-			</div>
+
 			<div id="brand">
 				<img src="donut.png" id="icon">
 				<div id="title">
