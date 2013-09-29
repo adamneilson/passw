@@ -1,0 +1,19 @@
+(power 2 2)
+(^ 2 2)
+(require 'clojure.contrib.math)
+(defn exp-s [x n]
+  (let [square (fn[x] (* x x))]
+    (cond (zero? n) 1
+          (even? n) (square (exp-s x (/ n 2)))
+          :else (* x (exp-s x (dec n))))))
+(exp-s 26 26)
+(exp-s 2 10)
+(exp-s 26 10)
+(exp-s 26N 26)
+(exp-s 2 2 2)
+(exp-s 26N (exp-s 26N 26))
+ (def eng (partial clojure.pprint/cl-format nil "~@(~@[~R~]~^ ~A.~)"))
+ (eng 234567898765434567890)
+(exp-s 26N 18)
+(exp-s 26N 20)
+(exp-s 26N 13)
