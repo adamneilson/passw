@@ -26,6 +26,7 @@
                   "-" "+" "=" "_" "." "/"
                   ))
 
+
 (def replacements {
                    :a ["a" "A" "@"]
                    :b ["b" "B" "ß" "8" "6"]
@@ -84,6 +85,8 @@
                    :z ["z" "Z" "2"]
                    })
 
+
+
 (def dictionary (flatten (into '() (take-csv "resources/public/words.csv"))))
 (def dictionary-size (count dictionary))
 
@@ -100,6 +103,7 @@
         part-3   (nth dictionary (rand-int dictionary-size))
         password  (str part-1 (nth connectors (rand-int  (count connectors))) part-2 )
         ]
+
     password))
 
 
@@ -151,9 +155,7 @@
           template  (slurp "resources/public/template.html")
 
           password (get-pw)
-
           complexified (complexify-pw password)
-
           fiendishly-hard (fiendishly-hardify-pw password)
 
           countr (* (count (.getBytes password)) 1N)
@@ -195,3 +197,6 @@
                              80))]
       (jetty/run-jetty #'app {:port  port
                               :join? false})))
+
+
+
