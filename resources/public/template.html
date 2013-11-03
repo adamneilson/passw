@@ -178,6 +178,15 @@
 	
 }
 
+.harder{
+/* 	border: 1px solid rgba(0,0,0,0.31); */
+	border-radius: 4px;
+	margin: 14px auto;
+	font-family: monospace;
+	font-size: 20px;
+	
+}
+
 	</style>
 </head>
 <!-- !Body -->
@@ -198,8 +207,10 @@
 				</div>
 			</div>
 			<div id="formly">
-				<input type="text" id="pw" value="{{password}}">
+				<input type="text" id="pw" value="{{password}}"><!-- default/complexity -->
 				<a href="/"><img src="rnd.svg" id="rnd"></a>
+				<div class="harder" id="harder">{{complexified}}</div><!-- Harder=complexity -->
+				<div class="harder" id="fiendishlyhard">{{fiendishlyhard}}</div><!-- F1eñ dish Lyh@rd-complexity -->
 			</div>
 			<div id="candp">{{years}} to one! </div>
 			<div id="candp"><strong>{{cheer}}</strong></div>
